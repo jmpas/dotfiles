@@ -26,6 +26,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'gorodinskiy/vim-coloresque'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -64,3 +65,6 @@ let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Airline fix
+let g:airline_powerline_fonts = 1
