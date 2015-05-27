@@ -12,7 +12,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
-" Plugin 'carlson-erik/wolfpack'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'wavded/vim-stylus'
@@ -28,6 +27,7 @@ Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'Yggdroot/indentLine'
+Plugin 'osyo-manga/vim-over'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -69,3 +69,16 @@ let g:syntastic_check_on_wq = 0
 
 " Airline fix
 let g:airline_powerline_fonts = 1
+
+" 'vim-over' find and replace shortcut
+function! VisualFindAndReplace()
+    :OverCommandLine%s/
+    :w
+endfunction
+function! VisualFindAndReplaceWithSelection() range
+    :'<,'>OverCommandLine s/
+    :w
+endfunction
+
+nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
+xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
