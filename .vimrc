@@ -31,7 +31,7 @@ Plugin 'osyo-manga/vim-over'
 " All of your Plugins must be added before the following line
 call vundle#end()
 syntax enable
-colorscheme monokai
+colorscheme Tomorrow-Night
 filetype plugin indent on
 
 " Default indent settings
