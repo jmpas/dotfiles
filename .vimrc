@@ -28,6 +28,8 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'Yggdroot/indentLine'
 Plugin 'osyo-manga/vim-over'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tyok/nerdtree-ack'
+Plugin 'wookiehangover/jshint.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
