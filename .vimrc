@@ -29,7 +29,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'osyo-manga/vim-over'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tyok/nerdtree-ack'
-Plugin 'wookiehangover/jshint.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'edkolev/tmuxline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -83,4 +84,4 @@ function! VisualFindAndReplaceWithSelection() range
 endfunction
 
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
-xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
+noremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
