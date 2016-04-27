@@ -45,30 +45,3 @@ else
     npm install -g stylus
     echo "OK"
 fi
-
-# browserify
-if which browserify &> /dev/null; then
-    msg_checking "browserify"
-else
-    msg_install "browserify" "npm install -g browserify"
-    npm install -g browserify
-    echo "OK"
-fi
-
-# bower
-if which bower &> /dev/null; then
-    msg_checking "bower"
-else
-    msg_install "bower" "npm install -g bower"
-    npm install -g bower
-    msg_ok "OK"
-fi
-
-# bower-installer
-if which bower-installer &> /dev/null; then
-    msg_checking "bower-installer"
-else
-    msg_install "bower-installer" "npm install -g bower-installer"
-    npm install -g bower-installer
-    msg_ok "OK"
-fi
