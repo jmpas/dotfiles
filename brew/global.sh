@@ -17,6 +17,9 @@ else
     ok "OK"
 fi
 
+#vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # phantomjs
 if which phantomjs &> /dev/null; then
     msg_checking "phantomjs"
