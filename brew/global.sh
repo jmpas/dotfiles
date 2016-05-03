@@ -22,7 +22,13 @@ brew install zsh zsh-completions
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 chsh -s /usr/local/bin/zsh
 
-#vundle
+# vim
+brew install macvim --override-system-vim
+
+# vim - colors
+cp -R .vim/colors ~/.vim/colors
+
+# vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # phantomjs
