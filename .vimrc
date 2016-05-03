@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+let mapleader = ','
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -35,7 +37,7 @@ Plugin 'edkolev/tmuxline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()
 syntax enable
-colorscheme Tomorrow-Night
+colorscheme Glacier 
 filetype plugin indent on
 
 " Default indent settings
@@ -84,4 +86,4 @@ function! VisualFindAndReplaceWithSelection() range
 endfunction
 
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
-noremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
+noremap <Leader>frs :call VisualFindAndReplaceWithSelection()<CR>
