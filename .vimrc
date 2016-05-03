@@ -25,6 +25,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'Yggdroot/indentLine'
@@ -33,6 +34,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tyok/nerdtree-ack'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'slim-template/vim-slim.git'
+Plugin 'nikvdp/ejs-syntax' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -74,6 +77,7 @@ let g:syntastic_check_on_wq = 0
 
 " Airline fix
 let g:airline_powerline_fonts = 1
+let g:airline_theme='simple'
 
 " 'vim-over' find and replace shortcut
 function! VisualFindAndReplace()
