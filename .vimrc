@@ -56,6 +56,9 @@ set linebreak "wrap lines at convenient point
 set cursorline
 set number
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/](.git|node_modules)$'
+
 " JSON syntax highlighting 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
