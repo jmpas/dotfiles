@@ -34,6 +34,9 @@ cp -R .vim/colors ~/.vim/colors
 # vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+# ack
+brew install ack
+
 # phantomjs
 if which phantomjs &> /dev/null; then
     msg_checking "phantomjs"
