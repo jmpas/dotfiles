@@ -14,11 +14,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Plugins
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimfiler.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'wavded/vim-stylus'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/syntastic'
@@ -30,13 +30,11 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'Yggdroot/indentLine'
 Plugin 'osyo-manga/vim-over'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'tyok/nerdtree-ack'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'nikvdp/ejs-syntax' 
+Plugin 'rking/ag.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -63,11 +61,15 @@ let g:ctrlp_custom_ignore = '\v[\/](.git|node_modules)$'
 " JSON syntax highlighting 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
-" NERDtree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-map <C-e> :NERDTreeToggle<CR>
-let g:NERDTreeShowHidden=1
+" Vimfiler
+let g:vimfiler_tree_indentation = 1
+let g:vimfiler_tree_leaf_icon = '┆'
+let g:vimfiler_tree_opened_icon = '▼'
+let g:vimfiler_tree_closed_icon = '▷'
+let g:vimfiler_file_icon = ' '
+let g:vimfiler_readonly_file_icon = '⭤'
+let g:vimfiler_marked_file_icon = '✓'
+let g:vimfiler_ignore_pattern = '^\%(.git\|.idea\|.DS_Store\|node_modules\)$'
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -81,7 +83,8 @@ let g:syntastic_check_on_wq = 0
 
 " Airline fix
 let g:airline_powerline_fonts = 1
-let g:airline_theme='simple'
+
+let g:vimfiler_as_default_explorer = 1
 
 " 'vim-over' find and replace shortcut
 function! VisualFindAndReplace()
